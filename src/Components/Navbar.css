@@ -1,0 +1,38 @@
+
+  
+ .main-navbar .active-link {
+    border-bottom: 2px solid blue;
+  }
+  
+  /* /* Navbar.css */
+  .main-navbar  ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: beige;
+  margin: 0;
+  padding: 1rem;
+  position: fixed; /* Keep fixed */
+  top: 0;
+  left: 0; /* Ensure it starts from the left edge */
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.main-navbar .active-link {
+  border-bottom: 2px solid blue;
+  font-weight: bold; /* Make active link clearer */
+}
+
+
+
+/* Add some basic link styling if needed */
+.main-navbar li a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem;
+}
+.main-navbar li a:hover {
+  color: blue;
+} 

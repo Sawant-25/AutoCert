@@ -1,0 +1,142 @@
+/* src/pages/Login.css */
+
+/* App background and base font settings ONLY */
+body {
+  background-color: #5333cd; /* Your desired purple background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  min-height: 100vh;
+  margin: 0; 
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for the LOGIN PAGE content BELOW the navbar */
+.login-page-container {
+  display: flex;            /* Use flexbox HERE to center the form box */
+  flex-direction: column;
+  justify-content: center;  /* Vertical centering within this container */
+  align-items: center;      /* Horizontal centering within this container */
+  min-height: 100vh;        /* Make container take full viewport height */
+  width: 100%;
+  box-sizing: border-box;
+
+  /* --- CRUCIAL: Push content below navbar --- */
+  /* Adjust 70px to your ACTUAL navbar height */
+  padding-top: 70px;
+  /* Add some overall padding if desired */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+
+/* The styled box containing the form */
+.login-form-box {
+  width: 100%;
+  max-width: 400px;        /* Max width of the form box */
+  margin: 0 auto;          /* Redundant with flex centering, but safe */
+  background-color: rgba(255, 255, 255, 0.08); /* Use your slightly transparent background */
+  padding: 30px 40px;      /* Internal padding for the box */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Use your shadow */
+  text-align: center;       /* Center the h2 */
+}
+
+.login-form-box h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #fff; /* White heading */
+}
+
+/* Style form elements WITHIN the box */
+.login-form-box form div {
+  margin-bottom: 18px;     /* Space between form rows */
+  text-align: left;        /* Align labels left */
+}
+
+.login-form-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #f0f0f0; /* Light label color */
+}
+
+.login-form-box input[type="text"],
+.login-form-box input[type="password"],
+.login-form-box select {
+  width: 100%;
+  padding: 0.7rem; /* Use consistent padding */
+  margin-bottom: 0; /* Remove margin-bottom from inputs themselves */
+  border: 1px solid #ccc; /* Simple default border */
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+.login-form-box input:focus,
+.login-form-box select:focus {
+    border-color: #5271ff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(82, 113, 255, 0.25); /* Add focus glow */
+}
+
+
+/* If there is an error, highlight input */
+.login-form-box .input-error { /* Add specificity */
+  border-color: #dc3545; /* Use a standard error red */
+}
+.login-form-box input.input-error:focus,
+.login-form-box select.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25); /* Red glow on focus */
+}
+
+/* Error message styling */
+.login-form-box .error-msg { /* Add specificity */
+  color: #ffbaba; /* Lighter red for better contrast on dark bg */
+  margin-top: 5px; /* Space above message */
+  margin-bottom: 0; /* Reset bottom margin */
+  font-size: 0.85rem;
+}
+
+/* Submit button */
+.login-form-box button[type="submit"] { /* Target BUTTON */
+  width: 100%;
+  padding: 0.8rem; /* Slightly larger padding */
+  margin-top: 25px; /* Space above button */
+  background-color: #5271ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 10rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form-box button[type="submit"]:hover:not(:disabled) {
+  background-color: #5271ff;
+}
+
+.login-form-box button[type="submit"]:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Autofill styles (keep if desired) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* REMOVE these redundant/conflicting rules */
+/*
+.login-page { ... }
+.login-wrapper { ... }
+*/

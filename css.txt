@@ -1,0 +1,103 @@
+.login-page-container {
+    display: flex;            /* Use flexbox HERE to center the form box */
+    flex-direction: column;
+    justify-content: center;  /* Vertical centering within this container */
+    align-items: center;      /* Horizontal centering within this container */
+    min-height: 100vh;        /* Make container take full viewport height */
+    width: 100%;
+    box-sizing: border-box;
+  
+    /* --- CRUCIAL: Push content below navbar --- */
+    /* Adjust 70px to your ACTUAL navbar height */
+    padding-top: 70px;
+    /* Add some overall padding if desired */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
+  /* Form container */
+  form {
+    align-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.05); /* slight contrast box */
+    padding: 2rem;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Input and select fields */
+  input[type="text"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+    border: 2px solid #5271ff;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* If there is an error, highlight input */
+  .input-error {
+    border-color: red;
+  }
+  
+  /* Error message styling */
+  .error-msg {
+    color: #ff6b6b;
+    margin-top: -0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Submit button */
+  input[type="submit"] {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #5271ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #415acc;
+  }
+  
+  input[type="submit"]:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #333 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  .login-page {
+    background-color: #5a3ec8;
+    min-height: 100vh;
+    padding-top: 60px; /* Adjust based on your navbar height */
+  }
+  .login-wrapper {
+    min-height: calc(100vh - 60px); /* adjust 60px based on your navbar height */
+    padding-top: 60px; /* push content below the navbar */
+  }
